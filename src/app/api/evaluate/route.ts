@@ -32,6 +32,7 @@ export async function POST(req: NextRequest) {
       max_tokens: 300,
     });
 
+    // TODO: parse response for valid formate and re hit api if not valid
     const raw = completion.choices[0].message.content;
     const parsed: EvaluateResponse = JSON.parse(raw ?? "{}");
 

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { openai } from "@/lib/openai";
+import { getOpenAIClient } from "@/lib/openai";
 import { buildSystemPrompt } from "@/lib/prompts";
 import type { EvaluateRequest, EvaluateResponse } from "@/types";
 
@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const openai = getOpenAIClient();
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
       messages: [

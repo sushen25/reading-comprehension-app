@@ -2,7 +2,7 @@
 
 A reading comprehension tool built for the EdAccelerator technical assessment. Students read a passage about honeybees in digestible chunks, answer free-text questions, and get real-time feedback from an AI tutor that actually explains *why* they're right or wrong.
 
-**Live demo:** [TODO: add Vercel URL]
+**Live demo:** https://ed-accelerator-delta.vercel.app/
 
 ---
 
